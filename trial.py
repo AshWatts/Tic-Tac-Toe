@@ -1,7 +1,7 @@
 def sum(a, b, c ):
     return a + b + c
 
-def printBoard(xState, zState):
+def printBoard(xState, zState):                                 # Function to print the current state of the board
     zero = 'X' if xState[0] else ('O' if zState[0] else 0)
     one = 'X' if xState[1] else ('O' if zState[1] else 1)
     two = 'X' if xState[2] else ('O' if zState[2] else 2)
@@ -17,7 +17,7 @@ def printBoard(xState, zState):
     print(f"--|---|---")
     print(f"{six} | {seven} | {eight} ") 
 
-def checkWin(xState, zState):
+def checkWin(xState, zState):                                 # Function to check if the game has been won
     wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     for win in wins:
         if(sum(xState[win[0]], xState[win[1]], xState[win[2]]) == 3):
